@@ -1,4 +1,6 @@
 const express = require('express');
+
+//express 路由
 const router = express.Router();
 
 router.get('/hi',(req,res)=>{

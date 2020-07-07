@@ -5,13 +5,11 @@
     get    查询
     put    更新
     delete 删除
-
     restful api (一种URL的格式)
 */
-
 const express = require('express');
 const app = express();
-const router = require('./myrouter.js');
+const router = require('./outRouter.js');
 
 // 直接使用use分发可以处理所有的路由请求
 // app.use((req,res)=>{
@@ -42,13 +40,14 @@ const router = require('./myrouter.js');
 
 // ----------------------------
 // route方法可以指定特定的请求方式
-app.route('/hello').get((req,res)=>{
-       res.send('get data 2 层');
-   }).post((req,res)=>{
-       res.send('post data');
-   });
+// app.route('/hello').get((req,res)=>{
+//        res.send('get data 2 层');
+//    }).post((req,res)=>{
+//        res.send('post data');
+//    });
 
 
+// const router = express.Router();
 
 // router.get('/hi',(req,res)=>{
 //     res.send('hi router');

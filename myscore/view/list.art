@@ -5,6 +5,7 @@
     <title>所有信息</title>
 </head>
 <body>
+  <div>each list methond   $index $value</div>
     <div>
        {{each list}}
        <ul>
@@ -18,9 +19,10 @@
        {{/each}}
    </div> 
 
-
+  <br/><br/>
+  <div>each list as value i method </div>
     <div>
-       {{each list as value i}}
+       {{each list  value i}}
        <ul>
             <li>索引：{{i}}</li>
            <li>语文：{{value.chinese}}</li>

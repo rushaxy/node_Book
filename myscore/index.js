@@ -11,6 +11,7 @@ http.createServer((req,res)=>{
     if(req.url.startsWith('/query') && req.method == 'GET'){
         let content = template(path.join(__dirname,'view','index.art'),{});
         res.end(content);
+
     }else if(req.url.startsWith('/score') && req.method == 'POST'){
         // 获取成绩的结果 /score
         let pdata = '';
@@ -24,16 +25,19 @@ http.createServer((req,res)=>{
             res.end(content);
         });
     }else if(req.url.startsWith('/all') && req.method == 'GET'){
-        let arr = [];
-        for(let key in scoreData){
-            arr.push(scoreData[key]);
-        }
+        // let arr = [];
+        // for(let key in scoreData){
+        //     arr.push(scoreData[key]);
+        // }
+        // console.info(arr);
         // 全部成绩
-        let content = template(path.join(__dirname,'view','list.art'),{
-            list : arr
-        });
+        // let content = template(path.join(__dirname,'view','list.art'),{
+        //     list : arr
+        // });
+        console.info(scoreData);//this is thansform way before top is lit good！
+        let content = template(path.join(__dirname,'view','list.art'),{list:scoreData});
         res.end(content);
     }
 }).listen(3000,()=>{
-    console.log('running....');
+    console.log('http://www.localhost:3000/query  running....');
 });

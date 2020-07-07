@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有信息</title>
+</head>
+<body>
+    <div>
+       {{each list}}
+       <ul>
+            <li>索引：{{$index}}</li>
+             <li>索引：{{$value}}</li>
+           <li>语文：{{$value.chinese}}</li>
+           <li>数学：{{$value.math}}</li>
+           <li>外语：{{$value.english}}</li>
+           <li>综合：{{$value.summary}}</li>
+       </ul>
+       {{/each}}
+   </div> 
+
+
+    <div>
+       {{each list as value i}}
+       <ul>
+            <li>索引：{{i}}</li>
+           <li>语文：{{value.chinese}}</li>
+           <li>数学：{{value.math}}</li>
+           <li>外语：{{value.english}}</li>
+           <li>综合：{{value.summary}}</li>
+       </ul>
+       {{/each}}
+   </div> 
+</body>
+</html>

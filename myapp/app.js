@@ -1,7 +1,14 @@
-var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+
+
+// error ruturn to client  handle
+var createError = require('http-errors');
+
+
+//cookie configuration
 var cookieParser = require('cookie-parser');
+//  日志打印
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');

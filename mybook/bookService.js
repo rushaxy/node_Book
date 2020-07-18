@@ -5,24 +5,9 @@ const data = require('./data.json');
 const path = require('path');
 const fs = require('fs');
 
-// 自动生成图书编号（自增）
-let maxBookCode = ()=>{
-    let arr = [];
-    data.forEach((item)=>{
-        arr.push(item.id);
-    });
-    return Math.max.apply(null,arr);
-}
-// 把内存数据写入文件
-let writeDataToFile = (res) => {
-    fs.writeFile(path.join(__dirname,'data.json'),JSON.stringify(data,null,4),(err)=>{
-        if(err){
-            res.send('server error');
-        }
-        // 文件写入成功之后重新跳转到主页面
-        res.redirect('/');
-    });
-}
+//应用工具类 处理
+const unit = require('./unit/unit.js');
+
 
 // 渲染主页面
 exports.showIndex = (req,res) => {
@@ -40,10 +25,10 @@ exports.addBook = (req,res) => {
     for(let key in info){
         book[key] = info[key];
     }
-    book.id = maxBookCode() + 1;
+    book.id = unit.maxBookCode() + 1;
     data.push(book);
     // 把内存中的数据写入文件
-    writeDataToFile(res);
+    unit.writeDataToFile(res);
 }
 // 跳转编辑图书页面
 exports.toEditBook = (req,res) => {
@@ -69,7 +54,7 @@ exports.editBook = (req,res) => {
         }
     });
     // 把内存中的数据写入文件
-    writeDataToFile(res);
+    unit.writeDataToFile(res);
 }
 // 删除图书信息
 exports.deleteBook = (req,res) => {
@@ -82,6 +67,6 @@ exports.deleteBook = (req,res) => {
         return;
     });
     // 把内存中的数据写入文件
-    writeDataToFile(res);
+    unit.writeDataToFile(res);
 }
 

@@ -1,10 +1,9 @@
 /*
-    路由模块
+   book路由模块
 */
-
 const express = require('express');
 const router = express.Router();
-const service = require('./service.js');
+const service = require('./bookService.js');
 
 // 路由处理
 

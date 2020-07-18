@@ -1,0 +1,31 @@
+
+
+
+# myscore http exercise
+myscore/node_modules/
+# myexpress express exercise
+myexpress/node_modules/
+#myapp  项目前期配置  
+myapp/node_modules/
+
+
+#mybook  json文件内部存储方式  图书登记项目
+mybook/node_modules/
+
+
+# code-generator-api
+# code-generator-api/.idea_modules/
+# code-generator-api/*.iml
+# code-generator-api/code-generator-api.iml
+# code-generator-api/*.log
+# code-generator-api/.idea/
+# code-generator-api/target/
+# code-generator-api/document/log/
+# code-generator-api/document/upload/
+
+# code-generator-web
+# code-generator-web/node_modules/
+# code-generator-web/dist/
+
+# .idea
+# *.log

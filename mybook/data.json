@@ -11,7 +11,8 @@
         "name": "水浒传",
         "author": "施耐庵",
         "category": "文学",
-        "desc": "108条好汉的故事"
+        "desc": "108条好汉的故事",
+        "_locals": {}
     },
     {
         "id": "3",
@@ -33,21 +34,14 @@
         "author": "金庸",
         "category": "文学",
         "desc": "武侠小说",
-        "id": 5
-    },
-    {
-        "name": "222",
-        "author": "22",
-        "category": "222",
-        "desc": "2222222",
-        "id": "6",
+        "id": "5",
         "_locals": {}
     },
     {
-        "name": "",
-        "author": "",
-        "category": "",
-        "desc": "",
-        "id": 7
+        "name": "把时间当做朋友",
+        "author": "李笑来",
+        "category": "时间管理",
+        "desc": "这是一本对人，下半生所作所为影响深远的书",
+        "id": 6
     }
 ]
